@@ -1,0 +1,52 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+int saldo_poupanca = 1500;
+int saldo_investimento = 5000;
+int poupanca = 1;
+int investimento = 0;
+int conta;
+int saque;
+    std::cout<<"BEM VINDO!!" << endl;
+    std::cout<<"Qual tipo de conta quer acessar?(poupanca = 1 ou empresarial = 0)" << endl;
+std::cin >> conta;
+
+if (conta == poupanca) {
+    cout << "Seu saldo é:";
+    cout << saldo_poupanca << endl; 
+    cout << "Quanto quer sacar?";
+    cin >> saque;
+    
+ if (saque > saldo_poupanca) {
+    std::cout << "Saldo insuficiente para saque";
+ } else {
+    std::cout <<"Saque efetuado" << endl;
+    std::cout << "Seu saldo atual é:";
+    std::cout << saldo_poupanca - saque;
+ }
+ 
+ 
+ 
+} else if (conta == investimento) {    
+    cout << "Seu saldo é:";
+    cout << saldo_investimento << endl; 
+    cout << "Quanto quer sacar?";
+    cin >> saque;
+ if (saque > saldo_investimento) {
+    std::cout << "Saldo insuficiente para saque";
+ } else {
+    std::cout <<"Saque efetuado" << endl;
+    std::cout << "Seu saldo atual é:";
+    std::cout << saldo_investimento - saque;
+ }
+}
+    
+
+    return 0;
+}
+
